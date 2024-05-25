@@ -75,7 +75,7 @@ if __name__ == "__main__":
     cap = cv2.VideoCapture(VIDEO_SOURCE)
 
     if not cap.isOpened():
-        raise Exception("Could not open video source {VIDEO_SOURCE}")
+        raise Exception(f"Could not open video source {VIDEO_SOURCE}")
     try:
         DeepDiveYOLO(model, cap).run()
     except Exception as e:
