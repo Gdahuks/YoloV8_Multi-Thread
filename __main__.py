@@ -36,7 +36,6 @@ class DeepDiveYOLO:
             threading.Event().wait(self.RUN_UP_BREAK)
 
         while not self.stop_event.is_set():
-            threading.Event().wait(2)
             with self.frame_lock:
                 frame = self.current_frame
             if frame is not None:
